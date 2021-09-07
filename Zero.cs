@@ -15,5 +15,15 @@ namespace Garage
         {
             Console.WriteLine($"The {MainColor} Zero screams past with an electric squeel! Weeown!");
         }
+
+        public override void Turn(string direction)
+        {
+            Console.WriteLine($"The Zero cuts sharply to the {direction}!");
+        }
+
+        public override void Stop()
+        {
+            Console.WriteLine("With a screech of tires, the Zero comes to an abrupt stop!");
+        }
     }
 }

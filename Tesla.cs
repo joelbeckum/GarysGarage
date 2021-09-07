@@ -15,5 +15,10 @@ namespace Garage
         {
             Console.WriteLine($"The {MainColor} Tesla zips by with barely a noise! Foosh!");
         }
+
+        public override void Stop()
+        {
+            Console.WriteLine("The Tesla glides silently to a stop.");
+        }
     }
 }
