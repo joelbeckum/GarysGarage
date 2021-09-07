@@ -2,13 +2,14 @@ using System;
 
 namespace Garage
 {
-    public class Zero : Vehicle
+    public class Zero : Vehicle, IElectricVehicle
     {
-        public double BatteryKWh { get; set; }
+        public double CurrentChargePercentage { get; set; } = 0.0;
 
         public void ChargeBattery()
         {
-            // method definition omitted
+            Console.WriteLine("Zero is fully charged!");
+            CurrentChargePercentage = 100.0;
         }
 
         public override void Drive()

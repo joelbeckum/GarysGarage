@@ -2,13 +2,14 @@ using System;
 
 namespace Garage
 {
-    public class Cessna : Vehicle
+    public class Cessna : Vehicle, IGasVehicle
     {
-        public double FuelCapacity { get; set; }
+        public double CurrentTankPercentage { get; set; } = 0.0;
 
         public void RefuelTank()
         {
-            // method definition omitted
+            Console.WriteLine("Cessna is fueled up and ready to fly!");
+            CurrentTankPercentage = 100.0;
         }
 
         public override void Drive()
